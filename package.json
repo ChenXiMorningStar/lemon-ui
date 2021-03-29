@@ -1,11 +1,10 @@
 {
-  "name": "gulu-ui-1",
-  "version": "0.0.4",
+  "name": "lemon-ui-1.0",
+  "version": "0.0.1",
   "files": [
     "dist/lib/*"
   ],
-  "main": "dist/lib/gulu.js",
-  "module": "dist/lib/gulu.esm.js",
+  "main": "dist/lib/lemon.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

@@ -24,7 +24,7 @@ export default {
     const showDialog = () => {
       openDialog({
         title: h('strong', {}, '标题'),
-        content: '买几件纯白色的vlone 我的眼里早已布满霓虹',
+        content: '今晚演出的rapper算得上是她最喜欢 她走到吧台先点了一杯whisky酸',
         ok() {
           console.log('ok')
         },
