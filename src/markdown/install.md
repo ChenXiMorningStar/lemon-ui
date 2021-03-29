@@ -2,11 +2,11 @@
 
 打开终端运行下面的命令：
 
-```npm install lemon-ui```
+```npm install lemon-ui-1.0```
 
 或
 
-```yarn add lemon-ui```
+```yarn add lemon-ui-1.0```
 
 但首先你得有npm或者yarn包管理工具，非常推荐在以下环境下运行本项目：
 

@@ -1,22 +1,18 @@
 <template>
   <table
-      :class="[
-          {
-            'table-border': border
-          }
-      ]"
+      :class="[{ 'table-border': border }]"
       class="gulu-table"
   >
     <thead>
     <tr>
-      <th v-for="(item, index) in columns" :key="index">
+      <th v-for="item in columns" :key="item.title + item.key">
         <div class="cell">{{ item.title }}</div>
       </th>
     </tr>
     </thead>
     <tbody>
-    <tr v-for="(col, index) in data" :key="index">
-      <td v-for="(colTd, tdIndex) in columns" :key="tdIndex">
+    <tr v-for="col in data" :key="col">
+      <td v-for="colTd in columns" :key="colTd.title + colTd.key">
         <div class="cell">{{ col[colTd.key] }}</div>
       </td>
     </tr>

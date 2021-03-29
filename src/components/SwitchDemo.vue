@@ -5,23 +5,60 @@
   <Demo :component="Switch1Demo" />
   <Demo :component="Switch2Demo" />
 </div>
+<div>
+  <h2>API</h2>
+  <Table
+    :columns="columns"
+    :data="dataSource"
+  ></Table>
+</div>
 </template>
 
 <script lang="ts">
-import Switch1Demo from './Switch1.demo.vue'
-import Switch2Demo from './Switch2.demo.vue'
-import Demo from './Demo.vue'
-import {
-  ref
-} from 'vue'
+import Switch1Demo from './Switch1.demo.vue';
+import Switch2Demo from './Switch2.demo.vue';
+import Demo from './Demo.vue';
+import Table from '../lib/Table.vue';
 export default {
   components: {
-    Demo
+    Demo,
+    Table
   },
   setup() {
+    const dataSource = [{
+      parameter: 'value(v-model)',
+      instructions: '指定当前是否选中',
+      type: 'boolean',
+      defaultValue: '无'
+    },{
+      parameter: 'disabled',
+      instructions: '是否禁用',
+      type: 'boolean',
+      defaultValue: 'false'
+    }]
+    const columns = [
+      {
+        title: '参数',
+        key: 'parameter'
+      },
+      {
+        title: '说明',
+        key: 'instructions'
+      },
+      {
+        title: '类型',
+        key: 'type'
+      },
+      {
+        title: '默认值',
+        key: 'defaultValue'
+      }
+    ]
     return {
       Switch1Demo,
       Switch2Demo,
+      dataSource,
+      columns
     }
   }
 }

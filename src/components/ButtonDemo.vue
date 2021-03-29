@@ -8,6 +8,13 @@
   <Demo :component="Button4Demo" />
   <Demo :component="Button5Demo" />
 </div>
+<div>
+  <h2>API</h2>
+  <Table
+    :columns="columns"
+    :data="dataSource"
+  ></Table>
+</div>
 </template>
 
 <script lang="ts">
@@ -17,17 +24,65 @@ import Button2Demo from "./Button2.demo.vue";
 import Button3Demo from "./Button3.demo.vue";
 import Button4Demo from "./Button4.demo.vue";
 import Button5Demo from "./Button5.demo.vue";
+import Table from '../lib/Table.vue';
 export default {
   components: {
-    Demo
+    Demo,
+    Table
   },
   setup() {
+    const dataSource = [{
+      parameter: 'theme',
+      instructions: '设置按钮样式，可选值为 button text link 或者不设',
+      type: 'string',
+      defaultValue: 'button'
+    },{
+      parameter: 'size',
+      instructions: '设置按钮大小，可选值为 normal big small 或者不设',
+      type: 'string',
+      defaultValue: 'normal'
+    },{
+      parameter: 'level',
+      instructions: '设置按钮类型，可选值为 normal main danger 或者不设',
+      type: 'string',
+      defaultValue: 'normal'
+    },{
+      parameter: 'disabled',
+      instructions: '按钮失效状态',
+      type: 'boolean',
+      defaultValue: 'false'
+    },{
+      parameter: 'loading',
+      instructions: '按钮加载状态',
+      type: 'boolean',
+      defaultValue: 'false'
+    }]
+    const columns = [
+      {
+        title: '参数',
+        key: 'parameter'
+      },
+      {
+        title: '说明',
+        key: 'instructions'
+      },
+      {
+        title: '类型',
+        key: 'type'
+      },
+      {
+        title: '默认值',
+        key: 'defaultValue'
+      }
+    ]
     return {
       Button1Demo,
       Button2Demo,
       Button3Demo,
       Button4Demo,
-      Button5Demo
+      Button5Demo,
+      dataSource,
+      columns
     };
   },
 };
