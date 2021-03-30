@@ -6,4 +6,6 @@
 
 所以我强烈不建议你将此 UI 组件库用于生产环境。但如果你觉得对官网和 UI 组件源码有兴趣，那么这个库还是值得一看的。我把源代码放在了 https://github.com/ChenXiMorningStar/lemon-ui 。
 
+如果github被墙了，也可以看gitee的仓库：https://gitee.com/sherlockzzz/lemon-ui 。
+
 下一节：[安装](#/doc/install)
